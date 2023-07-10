@@ -1,17 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Root from './components/root/Root';
-import './index.css';
+import './index.scss';
 import reportWebVitals from './reportWebVitals';
+import AppRoutes from './router';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root/>,
-  },
-]);
-
+const router = createBrowserRouter(AppRoutes);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
