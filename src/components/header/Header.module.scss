@@ -1,0 +1,21 @@
+@import '../../colors.scss';
+
+.Content {
+  border-bottom: 1px solid $secondary-color;
+
+  & > :global(.pure-menu-horizontal) {
+    text-align: right;
+    background-color: $primary-color;
+
+    :global(.pure-menu-link) {
+      padding: 1.5em 4em;
+      color: $text-color;
+
+      &:hover,
+      &:focus {
+        background-color: $accent-color;
+        color: $accent-text-color;
+      }
+    }
+  }
+}

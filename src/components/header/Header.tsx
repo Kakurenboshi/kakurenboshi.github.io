@@ -1,10 +1,11 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
+
+import s from './Header.module.scss';
 
 function Header() {
   return (
-    <header>
+    <header className={s.Content}>
       <nav className='pure-menu pure-menu-horizontal'>
         <ul className='pure-menu-list'>
           <li className='pure-menu-item'>

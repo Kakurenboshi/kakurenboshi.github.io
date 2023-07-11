@@ -1,7 +1,5 @@
 .page {
-  margin: 15px;
-
-  & .content {
-    margin: 15px;
+  & > .Content {
+    margin: 0.5em 1em;
   }
 }

@@ -3,6 +3,7 @@ import React from 'react';
 import ErrorPage from './components/error-page/ErrorPage';
 import Page from './components/page/Page';
 import Root from './components/root/Root';
+import Home from './pages/home/Home';
 
 const Routes = [
   {
@@ -16,7 +17,7 @@ const Routes = [
     children: [
       {
         path: '/',
-        element: <h1>Home</h1>,
+        element: <Home />,
       },
       {
         path: '/about',

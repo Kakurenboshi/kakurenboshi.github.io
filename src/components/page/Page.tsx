@@ -12,7 +12,7 @@ const Page = ({ children }: Props) => {
   return (
     <div className={s.page}>
       <Header />
-      <div className={s.content}>{children}</div>
+      <div className={s.Content}>{children}</div>
       <Footer />
     </div>
   );

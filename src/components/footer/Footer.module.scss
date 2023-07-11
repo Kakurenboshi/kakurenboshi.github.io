@@ -1,0 +1,27 @@
+@import '../../colors.scss';
+
+footer {
+  width: 100%;
+
+  background-color: $primary-color;
+  color: $text-color;
+
+  border-top: 1px solid $secondary-color;
+
+  & > .Content {
+    margin: 0.2em 1em;
+
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 35.5em) {
+  footer {
+    position: fixed;
+    bottom: 0;
+
+    & > .Content {
+      text-align: left;
+    }
+  }
+}
