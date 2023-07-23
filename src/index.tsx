@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
 import AppRoutes from './router';
 
-const router = createBrowserRouter(AppRoutes);
+const router = createHashRouter(AppRoutes);
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
