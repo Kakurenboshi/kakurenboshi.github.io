@@ -1,0 +1,9 @@
+.Thumbnail {
+  display: flex;
+  flex-grow: 0;
+  padding: 1px;
+
+  & > img {
+    width: 100%;
+  }
+}

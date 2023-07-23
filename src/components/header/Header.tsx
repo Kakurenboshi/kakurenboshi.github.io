@@ -14,6 +14,11 @@ function Header() {
             </Link>
           </li>
           <li className='pure-menu-item'>
+            <Link className='pure-menu-link' to='/portfolio'>
+              Portfolio
+            </Link>
+          </li>
+          <li className='pure-menu-item'>
             <Link className='pure-menu-link' to='/about'>
               About Us
             </Link>

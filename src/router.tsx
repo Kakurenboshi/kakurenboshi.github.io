@@ -4,6 +4,7 @@ import ErrorPage from './components/error-page/ErrorPage';
 import Page from './components/page/Page';
 import Root from './components/root/Root';
 import Home from './pages/home/Home';
+import Portfolio from './pages/portfolio/Portfolio';
 
 const Routes = [
   {
@@ -18,6 +19,10 @@ const Routes = [
       {
         path: '/',
         element: <Home />,
+      },
+      {
+        path: '/portfolio',
+        element: <Portfolio />,
       },
       {
         path: '/about',
