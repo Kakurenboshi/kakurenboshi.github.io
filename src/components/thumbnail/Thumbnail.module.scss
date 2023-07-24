@@ -1,7 +1,22 @@
 .Thumbnail {
   display: flex;
   flex-grow: 0;
-  padding: 1px;
+  margin: 2px 1px;
+
+  cursor: pointer;
+
+  &:hover {
+    -moz-transform: scale(1.042);
+    -ms-transform: scale(1.042);
+    -o-transform: scale(1.042);
+    -webkit-transform: scale(1.042);
+    transform: scale(1.042);
+    -moz-transition: all ease-out 100ms;
+    -ms-transition: all ease-out 100ms;
+    -o-transition: all ease-out 100ms;
+    -webkit-transition: all ease-out 100ms;
+    transition: all ease-out 100ms;
+  }
 
   & > img {
     width: 100%;

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import database from '../../db.json';
+import CurrentImage from '../current-image/CurrentImage';
+import { CurrentImageContext, ImageState } from '../current-image/CurrentImage.context';
 import GalleryColumn from '../gallery-column/GalleryColumn';
 import s from './Gallery.module.scss';
 
@@ -52,6 +54,7 @@ function buildGallery(columnNumber: number): Column[] {
 function Gallery() {
   const [columnNumber, setColumnNumber] = useState(getColumnByEmWidth(getEmWidth()));
   const [gallery, setGallery] = useState(buildGallery(columnNumber));
+  const [currentImage, setCurrentImage] = useState<ImageState>(undefined);
 
   useEffect(() => {
     function handleResize() {
@@ -71,13 +74,16 @@ function Gallery() {
   }, [setGallery, setColumnNumber, columnNumber]);
 
   return (
-    <div className={s.Container}>
-      <div className='pure-g'>
-        {gallery.map((column, i) => (
-          <GalleryColumn key={i} column={column} />
-        ))}
+    <CurrentImageContext.Provider value={[currentImage, setCurrentImage]}>
+      <div className={s.Container}>
+        <div className='pure-g'>
+          {gallery.map((column, i) => (
+            <GalleryColumn key={i} column={column} />
+          ))}
+        </div>
       </div>
-    </div>
+      <CurrentImage />
+    </CurrentImageContext.Provider>
   );
 }
 
