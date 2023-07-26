@@ -1,11 +1,29 @@
 @import '../../colors.scss';
 
 .Content {
-  border-bottom: 1px solid $secondary-color;
-
   & > :global(.pure-menu-horizontal) {
+    position: fixed;
+    z-index: 42;
     text-align: right;
     background-color: $primary-color;
+
+    padding: 0 1em;
+
+    border-bottom: 1px solid $secondary-color;
+
+    -moz-transition: all ease-out 210ms;
+    -ms-transition: all ease-out 210ms;
+    -o-transition: all ease-out 210ms;
+    -webkit-transition: all ease-out 210ms;
+    transition: all ease-out 210ms;
+
+    &.Show {
+      top: 0;
+    }
+
+    &.Hide {
+      top: calc(-4em - 3px);
+    }
 
     :global(.pure-menu-link) {
       padding: 1.5em 4em;
@@ -16,6 +34,14 @@
         background-color: $accent-color;
         color: $accent-text-color;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 35.5em) {
+  .Content {
+    & > :global(.pure-menu-horizontal) {
+      padding: 0;
     }
   }
 }

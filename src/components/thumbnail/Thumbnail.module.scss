@@ -5,7 +5,13 @@
 
   cursor: pointer;
 
-  &:hover {
+  & > img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 35.5em) {
+  .Thumbnail:hover {
     -moz-transform: scale(1.042);
     -ms-transform: scale(1.042);
     -o-transform: scale(1.042);
@@ -16,9 +22,5 @@
     -o-transition: all ease-out 100ms;
     -webkit-transition: all ease-out 100ms;
     transition: all ease-out 100ms;
-  }
-
-  & > img {
-    width: 100%;
   }
 }

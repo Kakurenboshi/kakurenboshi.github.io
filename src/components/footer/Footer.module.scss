@@ -3,11 +3,24 @@
 .Content {
   & > :global(.pure-menu-horizontal) {
     position: fixed;
-    bottom: 0;
     background-color: $primary-color;
     padding: 1em 0.5em;
 
     border-top: 1px solid $secondary-color;
+
+    -moz-transition: all ease-out 210ms;
+    -ms-transition: all ease-out 210ms;
+    -o-transition: all ease-out 210ms;
+    -webkit-transition: all ease-out 210ms;
+    transition: all ease-out 210ms;
+
+    &.Show {
+      bottom: 0;
+    }
+
+    &.Hide {
+      bottom: -3.5em;
+    }
 
     & > .PureMenuHeadingWrapper {
       display: inline-block;
