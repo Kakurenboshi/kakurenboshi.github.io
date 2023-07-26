@@ -1,27 +1,35 @@
 @import '../../colors.scss';
 
-footer {
-  width: 100%;
-
-  background-color: $primary-color;
-  color: $text-color;
-
-  border-top: 1px solid $secondary-color;
-
-  & > .Content {
-    margin: 0.2em 1em;
-
-    text-align: center;
-  }
-}
-
-@media screen and (min-width: 35.5em) {
-  footer {
+.Content {
+  & > :global(.pure-menu-horizontal) {
     position: fixed;
     bottom: 0;
+    background-color: $primary-color;
+    padding: 1em 0.5em;
 
-    & > .Content {
-      text-align: left;
+    border-top: 1px solid $secondary-color;
+
+    & > .PureMenuHeadingWrapper {
+      display: inline-block;
+      width: calc(40vw - 0.8em);
+      min-width: fit-content;
+    }
+
+    :global(.pure-menu-item) {
+      width: calc(20vw - 0.73333em);
+      min-width: fit-content;
+    }
+
+    :global(.pure-menu-link) {
+      display: inline-block;
+      color: $text-color;
+      padding: 0 0.5em;
+
+      &:hover,
+      &:focus {
+        background-color: $primary-color;
+        color: $accent-text-color;
+      }
     }
   }
 }

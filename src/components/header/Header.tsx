@@ -6,7 +6,7 @@ import s from './Header.module.scss';
 function Header() {
   return (
     <header className={s.Content}>
-      <nav className='pure-menu pure-menu-horizontal'>
+      <nav className='pure-menu pure-menu-horizontal pure-menu-scrollable'>
         <ul className='pure-menu-list'>
           <li className='pure-menu-item'>
             <Link className='pure-menu-link' to='/'>
