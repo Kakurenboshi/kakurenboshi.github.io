@@ -3,8 +3,10 @@
 .Content {
   & > :global(.pure-menu-horizontal) {
     position: fixed;
+    display: flex;
+    justify-content: space-between;
+
     z-index: 42;
-    text-align: right;
     background-color: $primary-color;
 
     padding: 0 1em;
@@ -23,6 +25,32 @@
 
     &.Hide {
       top: calc(-4em - 3px);
+    }
+
+    & > .PureMenuHeadingWrapper {
+      display: inline-block;
+      min-width: fit-content;
+
+      .Logo {
+        display: inline-block;
+        height: 0.9em;
+        margin-right: 1em;
+        vertical-align: middle;
+        transform: translateY(-0.1em);
+
+        filter: invert(64%) sepia(29%) saturate(7370%) hue-rotate(9deg) brightness(100%) contrast(101%);
+      }
+
+      :global(.pure-menu-link) {
+        &:hover, &:focus {
+          background-color: $primary-color;
+        }
+      }
+    }
+
+    & > .PureMenuListWrapper {
+      display: inline-block;
+      min-width: fit-content;
     }
 
     :global(.pure-menu-link) {

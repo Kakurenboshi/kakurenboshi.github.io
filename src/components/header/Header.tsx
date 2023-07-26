@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { ReactComponent as Logo } from './logo-base.svg';
 
 import s from './Header.module.scss';
 
@@ -29,28 +30,35 @@ function Header() {
   return (
     <header className={s.Content}>
       <nav className={`pure-menu pure-menu-horizontal pure-menu-scrollable ${s.Show}`}>
-        <ul className='pure-menu-list'>
-          <li className='pure-menu-item'>
-            <Link className='pure-menu-link' to='/'>
-              Home
-            </Link>
-          </li>
-          <li className='pure-menu-item'>
-            <Link className='pure-menu-link' to='/portfolio'>
-              Portfolio
-            </Link>
-          </li>
-          <li className='pure-menu-item'>
-            <Link className='pure-menu-link' to='/about'>
-              About Us
-            </Link>
-          </li>
-          <li className='pure-menu-item'>
-            <Link className='pure-menu-link' to='/contact'>
-              Contact Us
-            </Link>
-          </li>
-        </ul>
+        <div className={s.PureMenuHeadingWrapper}>
+          <a href='#' className='pure-menu-heading pure-menu-link'>
+            <Logo className={s.Logo} />Kakurenboshi
+          </a>
+        </div>
+        <div className={s.PureMenuListWrapper}>
+          <ul className='pure-menu-list'>
+            <li className='pure-menu-item'>
+              <Link className='pure-menu-link' to='/'>
+                Home
+              </Link>
+            </li>
+            <li className='pure-menu-item'>
+              <Link className='pure-menu-link' to='/portfolio'>
+                Portfolio
+              </Link>
+            </li>
+            <li className='pure-menu-item'>
+              <Link className='pure-menu-link' to='/about'>
+                About Us
+              </Link>
+            </li>
+            <li className='pure-menu-item'>
+              <Link className='pure-menu-link' to='/contact'>
+                Contact Us
+              </Link>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
   );
