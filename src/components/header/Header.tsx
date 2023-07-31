@@ -38,11 +38,6 @@ function Header() {
         <div className={s.PureMenuListWrapper}>
           <ul className='pure-menu-list'>
             <li className='pure-menu-item'>
-              <Link className='pure-menu-link' to='/'>
-                Home
-              </Link>
-            </li>
-            <li className='pure-menu-item'>
               <Link className='pure-menu-link' to='/portfolio'>
                 Portfolio
               </Link>
